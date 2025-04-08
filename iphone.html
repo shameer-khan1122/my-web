@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* Adds space between cards */
+    flex-wrap: wrap;
+    /* Allows wrapping for smaller screens */
+  }
+
+  .card {
+    flex: 1 1 calc(25% - 20px);
+    /* Each card takes 25% width minus gap */
+    max-width: 25%;
+    /* Ensures no card exceeds 25% width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional shadow */
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 calc(50% - 20px);
+      /* Cards take 50% width on smaller screens */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .card {
+      flex: 1 1 100%;
+      /* Cards take full width on very small screens */
+    }
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+    /* Space between cards */
+  }
+
+  .card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    /* Space between cards */
+  }
+
+  .card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 23%;
+    /* Ensure 4 cards fit in a row */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+
+  }
+</style>
+
+<body>
+
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark p-5">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#"><img src="assets/image/logo.png" height=50px></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white fs-5" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fs-5" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Gallery
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-white fs-5" href="#" tabindex="-1" aria-disabled="true">Services</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- ending -->
+
+  <!-- card starting -->
+  <img src="assets/image/iphone-16_overview__fcivqu9d5t6q_og.png" width="100%">
+
+  <div class="card-container">
+    <div class="card">
+      <img src="assets/image/16.png" class="card-img-top" alt="Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Iphone 16</h5>
+        <p class="card-text">The iPhone 16 features a sleek design, A18 chip, 48MP camera, Action Button, Wi-Fi 7,
+          customizable AI tools, and long battery life, starting at "$799" launched September 2024.</p>
+        <a href="#" class="btn btn-primary">Learn More/ Buy</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/image/plus.webp" class="card-img-top" alt="Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Iphone 16 Plus</h5>
+        <p class="card-text">The iPhone 16 Plus features a 6.7-inch OLED display, A18 chip, 48MP camera, Action Button,
+          Wi-Fi 7, extended battery life, and sleek design, starting at "$899" launched September 2024.</p>
+        <a href="#" class="btn btn-primary">Learn More/ Buy</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/image/pro.webp" class="card-img-top" alt="Card 3">
+      <div class="card-body">
+        <h5 class="card-title">Iphone 16 Pro</h5>
+        <p class="card-text">The iPhone 16 Pro features a 6.3-inch OLED display, A18 Pro chip, 48MP main camera with 5x
+          optical zoom, titanium design, and enhanced battery life, starting at "$1,199" launched September 2024.
+        </p>
+        <a href="#" class="btn btn-primary">Learn More/ Buy</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/image/pro max.jpg" class="card-img-top" alt="Card 4">
+      <div class="card-body">
+        <h5 class="card-title">Iphone 16 Pro Max</h5>
+        <p class="card-text">The iPhone 16 Pro Max features a 6.9-inch OLED display, A18 Pro chip, 48MP main camera with
+          5x optical zoom, titanium design, and enhanced battery life, starting at "$1,199" launched September 2024.
+        </p>
+        <a href="#" class="btn btn-primary">Learn More/ Buy</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- card ending -->
+
+
+  <!-- Watch-card  -->
+  <div class="container ">
+    <img src="assets/image/watch1.jpg" width="100%">
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="assets/image/1.jpg" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">Series 8</h5>
+        <p class="card-text">The Apple Watch Series 8 features a larger always-on Retina display, advanced health
+          sensors (temperature, ECG, blood oxygen), crash detection, 18-hour battery life, and swim-proof durability,
+          starting at "$399" launched September 2022.</p>
+        <a href="#" class="btn">Learn More/ Buy</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/image/9.jpg" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">Series 9</h5>
+        <p class="card-text">The Apple Watch Series 9 features a brighter OLED display, S9 chip for improved
+          performance, enhanced health tracking (ECG, blood oxygen, temperature), longer battery life, and new color
+          options, starting at "$399"</p>
+        <a href="#" class="btn">Learn More/ Buy</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/image/ultra.jpg" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">Watch Ultra 2</h5>
+        <p class="card-text">The Apple Watch Ultra 2 offers a rugged titanium design, brighter display, advanced GPS,
+          improved health sensors (ECG, blood oxygen), enhanced battery life, and is built for extreme sports, starting
+          at "$799"</p>
+        <a href="#" class="btn">Learn More/ Buy</a>
+      </div>
+    </div>
+  </div>
+  <!-- ending -->
+
+  <div class="container">
+    <img src="assets/image/air.webp" width="100%">
+  </div>
+
+  <!-- airpods -->
+  <div class="card-container">
+    <div class="card">
+      <img src="assets/image/3.webp" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">Airpods Gen 3</h5>
+        <p class="card-text">AirPods Gen 3 features spatial audio, adaptive EQ, improved sound, and a 6-hour battery
+          life. Sweat and water-resistant, with a more ergonomic design. Priced at "$169" launched October 2021.</p>
+        <a href="#" class="btn">Learn More/ Buy</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/image/pro2.jpg" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">Airpods Pro </h5>
+        <p class="card-text">AirPods Pro offers active noise cancellation, spatial audio, adaptive EQ, and a
+          customizable fit. With sweat and water resistance, they provide up to 4.5 hours of listening. Priced at "$249"
+        </p>
+        <a href="#" class="btn">Learn More/ Buy</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/image/pro1.webp" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">Airpods Pro 2</h5>
+        <p class="card-text">AirPods Pro 2 features enhanced active noise cancellation, improved sound quality, adaptive
+          transparency, and personalized spatial audio. With a 6-hour battery life, it’s priced at "$249" released
+          September 2022.</p>
+        <a href="#" class="btn">Learn More/ Buy</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/image/pro max.webp" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">Airpods Pro Max</h5>
+        <p class="card-text">AirPods Max features active noise cancellation, spatial audio, and premium sound quality
+          with a comfortable design. Equipped with custom drivers and up to 20 hours of battery life. Priced at "$549".
+        </p>
+        <a href="#" class="btn">Learn More/ Buy</a>
+      </div>
+    </div>
+  </div>
+  <!-- ending -->
+
+  <!-- footer -->
+  <div class="footer bg-dark p-5 text-center text-white">
+    <footer>
+      <p>© 2025 Your Company. All Rights Reserved.</p>
+    </footer>
+  </div>
+  <!-- ending -->
+
+</body>
+<script src="assets/css/bootstrap.min.js"></script>
+<script src="assets/css/prooper.min.js"></script>
+
+</html>
